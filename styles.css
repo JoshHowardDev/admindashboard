@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.bodyContainer {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: grid;
+    grid: 
+        "sidebar header"
+        "sidebar mainContent";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+.header {
+    grid-area: header;
+    box-sizing:border-box;
+    z-index: 100;
+    box-shadow: 0 3px 5px rgb(0, 0, 0, 0.3);
+}
+
+.sidebar {
+    grid-area: sidebar;
+    z-index: 100;
+    background-color: #22d3ee;
+}
+
+.mainContent {
+    grid-area: mainContent;
+    background-color: #cffafe;
+}
