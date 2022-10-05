@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .bodyContainer {
@@ -10,24 +11,117 @@ body {
     grid: 
         "sidebar header"
         "sidebar mainContent";
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: minmax(min-content, max-content) 1fr;
 }
 
 .header {
     grid-area: header;
-    box-sizing:border-box;
     z-index: 100;
     box-shadow: 0 3px 5px rgb(0, 0, 0, 0.3);
+    padding: 15px 40px 20px 40px;
+    display: grid;
+    gap: 30px;
 }
 
 .sidebar {
     grid-area: sidebar;
     z-index: 100;
-    background-color: #22d3ee;
+    padding: 20px;
+    background-color: #0284c7;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.sidebar>div {
+    margin-bottom: 40px;
+}
+
+.sidebarButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sidebarButton:hover {
+    cursor: pointer;
+}
+
+.sidebarButton>img {
+    width: 1.7rem;   
+    margin: 10px;
 }
 
 .mainContent {
     grid-area: mainContent;
     background-color: #cffafe;
+}
+
+.dashboardIcon {
+    font-size: 1.5rem;
+}
+
+.headerTop, .headerBottom {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
+}
+
+#searchBar {
+    width: clamp(200px, 80%, 800px);
+    background-color: #cffafe;
+    border-radius: 20px;
+    font-size: 1.5rem;
+}
+
+.profileDiv {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.headerTop img {
+    width: 30px;
+}
+
+#profilePicture {
+    width: 80px;
+}
+
+.profileDiv, .searchDiv, .greetingDiv, .postButtonsDiv {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.postButtonsDiv, .profileDiv {
+    justify-content: center;
+}
+
+.greetingText {
+    display: flex;
+    flex-direction: column;
+}
+
+#profilePictureGreeting {
+    width: 100px;
+}
+
+#greetingName {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.postButtonsDiv {
+    padding-right: 30px;
+}
+
+.postButton {
+    background-color: #0284c7;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    width: 7rem;
+    padding: 5px;
 }

@@ -5,16 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="script.js"></script>
     <title>Admin Dashboard</title>
 </head>
 <body>
     <div class="bodyContainer">
         <div class="header">
-    
+            <div class="headerTop">
+                <div class="searchDiv">
+                    <img src="images/icons/search.png" alt="Search">
+                    <input type="text" id="searchBar">
+                </div>
+                <div class="profileDiv">
+                    <img src="images/icons/notification.png" alt="Notification">
+                    <img src="images/icons/batman.png" alt="Profile Picture" id="profilePicture">
+                    <span>Bruce Wayne</span>
+                </div>
+            </div>
+            <div class="headerBottom">
+                <div class="greetingDiv">
+                    <img src="images/icons/batman.png" alt="Profile Picture" id="profilePictureGreeting">
+                    <div class="greetingText">
+                        <span>Hi there, </span>
+                        <span id="greetingName">Bruce Wayne (@batman)</span>
+                    </div>
+                </div>
+                <div class="postButtonsDiv">
+                    <button type="button" class="postButton">New</button>
+                    <button type="button" class="postButton">Upload</button>
+                    <button type="button" class="postButton">Share</button>
+                </div>
+            </div>
         </div>
         <div class="sidebar">
-    
+            <div class="dashboardLogo">
+                <div class="dashboardIcon sidebarButton">
+                    <img src="images/icons/dashboard.png" alt="Dashboard Icon">
+                    <span>Dashboard</span>
+                </div>
+            </div>
+            <div class="sidebarNav">
+                <div class="sidebarHome sidebarButton">
+                    <img src="images/icons/home.png" alt="Home Icon">
+                    <span>Home</span>
+                </div>
+                <div class="sidebarProfile sidebarButton">
+                    <img src="images/icons/profile.png" alt="Profile Icon">
+                    <span>Profile</span>
+                </div>
+                <div class="sidebarMessages sidebarButton">
+                    <img src="images/icons/message.png" alt="Message Icon">
+                    <span>Messages</span>
+                </div>
+                <div class="sidebarHistory sidebarButton">
+                    <img src="images/icons/history.png" alt="History Icon">
+                    <span>History</span>
+                </div>
+                <div class="sidebarTasks sidebarButton">
+                    <img src="images/icons/tasks.png" alt="Tasks Icon">
+                    <span>Tasks</span>
+                </div>
+                <div class="sidebarCommunities sidebarButton">
+                    <img src="images/icons/communities.png" alt="Communities Icon">
+                    <span>Communities</span>
+                </div>
+            </div>
+            <div class="sidebarBranding">
+                <div class="sidebarSettings sidebarButton">
+                    <img src="images/icons/settings.png" alt="Settings Icon">
+                    <span>Settings</span>
+                </div>
+                <div class="sidebarSupport sidebarButton">
+                    <img src="images/icons/support.png" alt="Support Icon">
+                    <span>Support</span>
+                </div>
+                <div class="sidebarPrivacy sidebarButton">
+                    <img src="images/icons/privacy.png" alt="Privacy Icon">
+                    <span>Privacy</span>
+                </div>
+            </div>
         </div>
         <div class="mainContent">
     
