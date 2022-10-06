@@ -6,7 +6,7 @@ body {
 
 .bodyContainer {
     min-height: 100vh;
-    min-width: 100vw;
+    min-width: 98vw;
     display: grid;
     grid: 
         "sidebar header"
@@ -27,7 +27,7 @@ body {
 .sidebar {
     grid-area: sidebar;
     z-index: 100;
-    padding: 20px;
+    padding: 30px;
     background-color: #0284c7;
     color: white;
     font-size: 1.3rem;
@@ -44,10 +44,6 @@ body {
     align-items: center;
 }
 
-.sidebarButton:hover {
-    cursor: pointer;
-}
-
 .sidebarButton>img {
     width: 1.7rem;   
     margin: 10px;
@@ -56,6 +52,25 @@ body {
 .mainContent {
     grid-area: mainContent;
     background-color: #cffafe;
+    display: grid;
+    padding: 2vw;
+    gap: 2vw;
+    grid:
+        "mainContentLeft announcements" 1fr
+        "mainContentLeft trending" 1fr
+        / 3.3fr 1fr;
+}
+
+.mainContentLeft {
+    grid-area: mainContentLeft;
+}
+
+.announcementsContainer {
+    grid-area: announcements;
+}
+
+.trendingContainer {
+    grid-area: trending;
 }
 
 .dashboardIcon {
@@ -73,6 +88,7 @@ body {
     background-color: #cffafe;
     border-radius: 20px;
     font-size: 1.5rem;
+    padding-left: 10px;
 }
 
 .profileDiv {
@@ -124,4 +140,110 @@ body {
     font-family: 'Roboto', sans-serif;
     width: 7rem;
     padding: 5px;
+}
+
+.invertIcon {
+    filter: invert(100%);
+}
+
+.projectsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2vw;
+}
+
+.containerTitleDiv {
+    align-self: end;
+    font-size: 1.5rem;    
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.announcementsCard, .projectCard, .trendingCard {
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.5);
+    padding: 20px;   
+}
+
+.projectCard {
+    border-left: 10px solid rgb(255, 153, 0);
+    display: grid;
+    grid-template-rows: 1fr max-content;
+    padding: 40px;
+}
+
+.projectCardTextDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.projectCardTitle {
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.projectCardDescription {
+    font-size: 1.2;
+    color: rgba(128, 128, 128, 0.9)
+}
+
+.projectIconsDiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    place-self: end;    
+}
+
+.projectIcons {
+    width: 23px;
+}
+
+.announcementsCard {
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.5);
+    padding: 20px;   
+    display: grid;
+
+}
+
+.announcement + .announcement {
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.announcement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+}
+
+.announcementTitle {
+    font-weight: 700;  
+}
+
+.trendingProfile {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 10px;
+    padding: 15px;
+}
+
+.trendingProfileText {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.trendingUsername {
+    font-weight: 700;
+}
+
+.trendingIcon {
+    width: 50px;
+}
+
+.clickable:hover, .projectIcons:hover, .projectCardTitle:hover, .sidebarButton:hover, .postButton:hover {
+    cursor: pointer;
 }
